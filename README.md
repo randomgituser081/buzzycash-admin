@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploying with Coolify (plusergames.africa)
+
+The app ships with a `Dockerfile` (Next.js standalone, port 3000).
+
+1. Point `plusergames.africa` at the Coolify server.
+2. Create an application from this repo, branch `main`, Dockerfile build pack, base directory `/`, port 3000.
+3. Optional build variable `NEXT_PUBLIC_API_BASE_URL` (defaults to `https://buzzycash.viaspark.site/api/v1`). It is baked in at build time, so tick **Build Variable** and redeploy after changing it.
+4. The browser calls the API directly, so the backend's `ALLOWED_ORIGINS` must include `https://plusergames.africa`.
